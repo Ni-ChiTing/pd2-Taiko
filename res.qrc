@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>pic/tiko.png</file>
+        <file>pic/back.png</file>
+        <file>pic/score.jpg</file>
+        <file>pic/introduction.jpg</file>
+        <file>pic/note.png</file>
+        <file>pic/note1.png</file>
+        <file>pic/note3.png</file>
+        <file>pic/note2.png</file>
+        <file>pic/0004.gif</file>
+        <file>pic/option.jpg</file>
+        <file>pic/diff.jpg</file>
+        <file>pic/rank2.jpg</file>
+    </qresource>
+</RCC>

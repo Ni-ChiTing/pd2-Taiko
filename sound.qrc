@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/sound">
+        <file>sound/tia.wav</file>
+        <file>sound/hard.wav</file>
+        <file>sound/medium.wav</file>
+    </qresource>
+</RCC>

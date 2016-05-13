@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>pic/tiko.png</file>
+        <file>pic/Mainwindow.png</file>
+        <file>pic/Fear-1.jpg</file>
+        <file>pic/Fear.jpg</file>
+        <file>pic/back.png</file>
+        <file>pic/rank2.jpg</file>
+    </qresource>
+</RCC>
