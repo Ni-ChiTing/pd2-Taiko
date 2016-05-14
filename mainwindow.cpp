@@ -21,13 +21,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete mainwindow2;
-    delete rank1;
-    delete option1;
-    delete intr;
-    delete ui;
-    delete music;
     delete movie;
+    delete music;
+    delete ui;
 }
 
 void MainWindow::on_start_clicked()

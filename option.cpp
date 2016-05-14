@@ -11,9 +11,9 @@ option::option(QWidget *parent) :
 
 option::~option()
 {
-    delete ui;
-    delete diff1;
+
     delete music12;
+    delete ui;
 
 }
 
