@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">music{border-image: url(:/pic/pic/music.jpg);}</string>
+  </property>
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>

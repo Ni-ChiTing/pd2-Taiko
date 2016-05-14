@@ -26,6 +26,7 @@ MainWindow::~MainWindow()
     delete option1;
     delete intr;
     delete ui;
+    delete music;
     delete movie;
 }
 
@@ -65,6 +66,8 @@ void MainWindow::on_option_clicked()
     this->hide();
      connect(option1,SIGNAL(sendlevel(int)),this,SLOT(getlevel(int)));
     connect(option1, SIGNAL(onoptionClosed()), this, SLOT(show()));
+    connect(option1,SIGNAL(mison()),this,SLOT(misicon()));
+       connect(option1,SIGNAL(misoff()),this,SLOT(misicoff()));
 }
 
 void MainWindow::mouseMoveEvent(QMouseEvent *e)
@@ -118,4 +121,12 @@ connect(intr,SIGNAL(intclose()),this,SLOT(show()));
 void MainWindow::on_Exit_clicked()
 {
     this->close();
+}
+void MainWindow::misicon()
+{
+    music->play();
+}
+void MainWindow::misicoff()
+{
+    music->stop();
 }

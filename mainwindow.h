@@ -32,7 +32,8 @@ private slots:
     void on_option_clicked();
     void getlevel(int a);
     void on_introduction_clicked();
-
+    void misicon();
+    void misicoff();
     void on_Exit_clicked();
 
 signals:

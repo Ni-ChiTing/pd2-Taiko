@@ -12,3 +12,19 @@ music::~music()
 {
     delete ui;
 }
+
+void music::on_pushButton_clicked()
+{
+    if(ui->radioButton->isChecked())
+    {
+        emit onmusic(1);
+        this->close();
+}
+    if(ui->radioButton_2->isChecked())
+{
+    emit offmusic(2);
+
+    this->close();
+}
+emit itclose();
+}
