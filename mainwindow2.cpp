@@ -13,7 +13,7 @@
 
 MainWindow2::MainWindow2(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow2),tt(new QTimer),cc(new QTimer),ww(new QTimer)
+    ui(new Ui::MainWindow2),tt(new QTimer),cc(new QTimer)
 {
 
     ui->setupUi(this);
@@ -21,8 +21,7 @@ MainWindow2::MainWindow2(QWidget *parent) :
     connect(tt,SIGNAL(timeout()),this,SLOT(timecount()));
     srand(time(NULL));
     sc=new score(this);
-
-    connect(ww,SIGNAL(timeout()),this,SLOT(resultshow()));
+    connect(this,SIGNAL(timeend()),this,SLOT(resultshow()));
     connect(sc,SIGNAL(closes()),this,SLOT(mainshow()));
     connect(sc,SIGNAL(newgame()),this,SLOT(gamestart()));
     connect(sc,SIGNAL(ok()),this,SLOT(mainshow()));
@@ -36,7 +35,6 @@ MainWindow2::~MainWindow2()
     delete view;
     delete cc;
     delete tt;
-    delete ww;
     delete music1;
 
 }
@@ -60,19 +58,16 @@ void MainWindow2::gamestart()
  if(b==1)
  {
  tt->start(1000);
- ww->start(35000);
  }
 
  if(b==2)
  {
  tt->start(500);
- ww->start(33000);
  }
 
  if(b==3)
  {
  tt->start(500);
- ww->start(31000);
  }
 
 }
@@ -119,6 +114,7 @@ void MainWindow2::timecount()
     }
     else
       {
+         emit timeend();
         tt->stop();
     }
     }
@@ -140,6 +136,7 @@ void MainWindow2::timecount()
     }
     else
       {
+         emit timeend();
         tt->stop();
     }
     }
@@ -161,6 +158,7 @@ void MainWindow2::timecount()
     }
     else
       {
+        emit timeend();
         tt->stop();
     }
     }
@@ -331,7 +329,6 @@ void MainWindow2::resultshow()
     music1->stop();
     sc->setscore(a);
     sc->show();
-    ww->stop();
 }
 void MainWindow2::mainshow()
 {

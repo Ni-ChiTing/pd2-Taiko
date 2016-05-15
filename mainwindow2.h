@@ -38,11 +38,12 @@ void gamestart();
 void mainshow();
 signals:
     void onMainClosed();
+    void timeend();
 
 private:
     void keyPressEvent(QKeyEvent *event);
     Ui::MainWindow2 *ui;
-    QTimer *tt,*cc,*ww;
+    QTimer *tt,*cc;
     int totaltime;
     QGraphicsScene* scene;
     QGraphicsView* view;
