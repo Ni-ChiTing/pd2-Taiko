@@ -15,7 +15,6 @@ MainWindow2::MainWindow2(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow2),tt(new QTimer),cc(new QTimer)
 {
-
     ui->setupUi(this);
     MainWindow2::setFocusPolicy(Qt::StrongFocus);
     connect(tt,SIGNAL(timeout()),this,SLOT(timecount()));
